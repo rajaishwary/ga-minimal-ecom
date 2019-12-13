@@ -5,13 +5,13 @@ import { getProducts } from "../../modules/products";
 import { Container, Heading, ProductsContainer, ProductCard, ProductImg, ProductName, SubText } from "./styles";
 import Button from "../../components/button";
 
-class Products extends Component {
+class Products extends React.PureComponent {
   componentDidMount() {
     this.props.dispatch(getProducts());
   }
 
   onClickPay = (product, e) => {
-    var options = {
+    let options = {
       key: "rzp_test_1DP5mmOlF5G5ag",
       amount: product.price * 100,
       currency: "INR",
@@ -60,10 +60,9 @@ class Products extends Component {
   }
 }
 
-function mapStateToProps({ productsReducer, configReducer }) {
+function mapStateToProps({ productsReducer }) {
   return {
-    products: productsReducer.products,
-    banners: configReducer.banners
+    products: productsReducer.products
   };
 }
 

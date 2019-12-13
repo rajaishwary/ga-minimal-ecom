@@ -5,7 +5,7 @@ import { MainHeader, Nav, H1 } from './styles';
 const Header = () => {
   return (
     <MainHeader>
-      <H1>{"GA-ReactRedux-Beginner"}</H1>
+      <H1>{"GA-ReactRedux"}</H1>
       <Nav>
         <Link to="/">Home</Link>
         <Link to="/products">All Products</Link>

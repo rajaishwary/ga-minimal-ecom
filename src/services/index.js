@@ -13,3 +13,7 @@ export function getProductsApi() {
 export function getProductByIdApi(productId) {
   return getFetch(`${BASE_URL}/products/${productId}`);
 }
+
+export function getPopularProductsApi() {
+  return getFetch(`${BASE_URL}/popular-products`);
+}
