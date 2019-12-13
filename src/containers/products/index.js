@@ -1,24 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import Header from "../../components/header";
-import { getFeConfigs } from "../../modules/fe-config";
 
-class Home extends Component {
+class Products extends Component {
   constructor() {
     super();
     this.state = {};
   }
 
-  componentDidMount() {
-    this.props.dispatch(getFeConfigs());
-  }
-
   render() {
-    console.log(this.props);
+    console.log(this.props.products);
     return (
       <>
-        <div>Home</div>
+        <div>Products</div>
       </>
     );
   }
@@ -31,4 +25,4 @@ function mapStateToProps({ productsReducer, configReducer }) {
     };
   }
   
-  export default withRouter(connect(mapStateToProps)(Home));
+  export default withRouter(connect(mapStateToProps)(Products));
