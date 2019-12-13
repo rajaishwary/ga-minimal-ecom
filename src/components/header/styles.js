@@ -26,4 +26,9 @@ export const H1 = styled.h1`
 export const Nav = styled.nav`
 	float: right;
 	font-size: 100%;
+	display: flex;
+	height: 100%;
+	min-width: 200px;
+	justify-content: space-evenly;
+	align-items: center;
 `;

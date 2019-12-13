@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 	width: 100%;
 	padding: 0;
 	margin: 0;
-	background: #FAFAFA;
+	background-color: #e4e4e4;
 	font-family: 'Helvetica Neue', arial, sans-serif;
 	font-weight: 400;
 	color: #444;
@@ -16,14 +16,17 @@ export const GlobalStyle = createGlobalStyle`
   * {
 	box-sizing: border-box;
   }
+  p {
+	  margin: 0;
+  }
 `;
 
 export const AppContainer = styled.div`
   height: 100%;
+  background-color: #e4e4e4;
 `;
 
 export const Container = styled.div`
   margin-top: 56px;
   padding: 8px;
-  background-color: #e4e4e4;
 `;
