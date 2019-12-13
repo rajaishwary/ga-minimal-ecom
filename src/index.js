@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { GlobalStyle, AppContainer } from "./theme/globalStyles";
+import { GlobalStyle, AppContainer, Container } from "./theme/globalStyles";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "./configStore";
 import Header from "./components/header";
@@ -16,11 +16,13 @@ const Root = ({ store }) => (
     <AppContainer>
       <GlobalStyle />
       <Router>
-      <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/products" component={Products} />
-        </Switch>
+        <Header />
+        <Container>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/products" component={Products} />
+          </Switch>
+        </Container>
       </Router>
     </AppContainer>
   </Provider>

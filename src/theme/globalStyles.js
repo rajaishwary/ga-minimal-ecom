@@ -19,5 +19,11 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const AppContainer = styled.div`
-	height: 100%;
+  height: 100%;
+`;
+
+export const Container = styled.div`
+  margin-top: 56px;
+  padding: 8px;
+  background-color: #e4e4e4;
 `;

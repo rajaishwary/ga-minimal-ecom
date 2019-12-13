@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import Header from "../../components/header";
 import { getFeConfigs } from "../../modules/fe-config";
+import Banners from "../../components/banner";
 
 class Home extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class Home extends Component {
     console.log(this.props);
     return (
       <>
-        <div>Home</div>
+        <Banners banners={this.props.banners} />
       </>
     );
   }
