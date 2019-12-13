@@ -18,9 +18,10 @@ class Home extends Component {
   }
 }
 
-function mapStateToProps({ productsReducer }) {
+function mapStateToProps({ productsReducer, configReducer }) {
     return {
         products: productsReducer.products,
+        banners: configReducer.banners
     };
   }
   
